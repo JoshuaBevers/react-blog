@@ -13,4 +13,10 @@ router.get("/all", async (req, res) => {
   res.json(allPosts).status(200);
 });
 
+router.get("/post/:post_id?", async (req, res) => {
+  const postId = req.params.post_id;
+  const post = await DataBase.getById(postId);
+  res.json(post).status(200);
+});
+
 module.exports = router;

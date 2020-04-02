@@ -17,6 +17,16 @@ class Functions {
       return err.message;
     }
   }
+  static async getById(user_id) {
+    try {
+      const response = await db.one(
+        `select * from posts where id = ${user_id}`
+      );
+      return response;
+    } catch (err) {
+      return err.message;
+    }
+  }
 }
 
 module.exports = Functions;

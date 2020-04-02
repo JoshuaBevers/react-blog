@@ -3,6 +3,9 @@ import logo from "./logo.svg";
 import getAll from "./functions/get";
 import "./App.css";
 
+//components
+import User from "./components/user";
+
 export class App extends Component {
   state = {
     title: "Loading...",
@@ -27,6 +30,7 @@ export class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>{this.state.title}</p>
           <p>{this.state.content}</p>
+          <User />
         </header>
       </div>
     );
