@@ -6,7 +6,7 @@ const pgp = require("pg-promise")({
 
 const options = {
   host: "localhost",
-  database: "blog"
+  database: "posts"
 };
 
 const db = pgp(options);
