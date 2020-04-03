@@ -13,10 +13,7 @@ class User extends Component {
 
   postData = async data => {
     const url = `http://localhost:3001/users/post/comment`;
-    console.log(
-      "This is now trying to post from users.postData. The data is: ",
-      data
-    );
+
     // Default options are marked with *
     const response = await fetch(url, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -50,7 +47,6 @@ class User extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    console.log("this was submitted.");
     const data = {
       title: this.state.inputTitle,
       id: this.state.id,

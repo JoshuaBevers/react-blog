@@ -21,7 +21,6 @@ router.get("/post/:post_id?", async (req, res) => {
 
 router.post("/post/comment", async (req, res) => {
   const { title, id, content } = req.body;
-  console.log("Router post data recieved is: ", req.body);
   const response = await DataBase.addComment(title, id, content);
   console.log(response);
   return response;
