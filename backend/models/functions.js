@@ -27,6 +27,17 @@ class Functions {
       return err.message;
     }
   }
+
+  static async addComment(title, author_id, content) {
+    const query = `INSERT INTO posts (title, author_id, content) VALUES ('${title}', ${author_id}, '${content}')`;
+    console.log("add comment fired.", query);
+    try {
+      const response = await db.result(query);
+      return response;
+    } catch (err) {
+      return err.message;
+    }
+  }
 }
 
 module.exports = Functions;
