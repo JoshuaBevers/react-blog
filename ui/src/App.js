@@ -30,7 +30,6 @@ export class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>{this.state.title}</p>
           <p>{this.state.content}</p>
-          <User />
         </header>
       </div>
     );

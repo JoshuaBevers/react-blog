@@ -20,13 +20,14 @@ export const getById = async () => {
   }
 };
 
-export const submitComment = async id => {
-  try {
-    const push = await fetch(`http://localhost:3001/users/post/comment`);
-    //push change to database.
-  } catch (e) {
-    return e;
-  }
-};
+// export const submitComment = async id => {
+//   try {
+//     const push = await fetch(`http://localhost:3001/users/post/comment`);
+//     return push;
+//     //push change to database.
+//   } catch (e) {
+//     return e;
+//   }
+// };
 
 export default getAll;
